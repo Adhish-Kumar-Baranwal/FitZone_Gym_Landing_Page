@@ -1,0 +1,12 @@
+## Remaining Work (in order)
+
+1. Contact form — fix bugs, style, controlled inputs✅
+2. Frontend-backend connection (axios POST)✅
+3. Plan pre-filling from Pricing page✅
+4. Frontend + backend validation✅
+5. Responsive design (mobile/tablet breakpoints)✅
+6. Framer Motion animations (last, after everything complete):
+    a. Animate Services Section staggerChildern (Or smthng like that)✅
+    b. Animate Trainers Section staggerChildern (Or smthng like that)✅
+7. Add toasts to display the messages as a pop-up box✅
+8. Deploy — Vercel (frontend) + Render (backend) + MongoDB Atlas (free tiers)

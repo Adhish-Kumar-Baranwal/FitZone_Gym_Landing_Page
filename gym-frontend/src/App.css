@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); 
+@import "tailwindcss";
+
+body {
+  background-color: #09090b;
+  color: #fafafa;
+  font-family: 'Inter', sans-serif;
+}
+
+@utility flex-center{
+    @apply flex justify-center items-center;
+}
+
+@layer components{
+    .navBar{
+        @apply relative w-full py-3 px-8 bg-zinc-900 border-b-2 border-zinc-800;
+    }
+    .cta-btn{
+        @apply bg-orange-500 px-5 py-2.5 rounded-md font-semibold transition-colors duration-300 ease-in-out hover:bg-orange-600 cursor-pointer;
+    }
+    .card{
+        @apply bg-zinc-900 border-zinc-800 border rounded-md mx-6 py-6 px-4;
+    }
+    .footer-links{
+        @apply px-2 py-1 cursor-pointer text-zinc-400 hover:text-white transition-colors duration-300 ease-in-out;
+    }
+
+    .social-icon{
+        @apply text-zinc-400 cursor-pointer hover:text-white transition-colors duration-300 ease-in-out
+    }
+
+    .contact-input{
+        @apply focus:border-orange-500 focus:outline-none border rounded p-1 bg-zinc-900 border-zinc-700 text-white
+    }
+
+    .contact-label{
+        @apply text-sm text-zinc-400
+    }
+
+    .pricing-btns{
+        @apply mt-auto transition-colors duration-300 ease-in-out w-full py-2 font-semibold rounded-md cursor-pointer
+    }
+    
+    .pricing-btns-highlighted{
+        @apply bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-600
+    }
+
+    .pricing-btns-non-highlighted{
+        @apply border border-zinc-700 hover:border-orange-500 active:bg-orange-500 hover:text-orange-500 active:text-orange-600 text-zinc-300
+    }
+}
+

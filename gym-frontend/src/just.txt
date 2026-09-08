@@ -1,0 +1,52 @@
+import {motion} from "motion/react"
+import {useState} from "react"
+
+//wrapper
+const list = {
+    visible: {
+        opacity:1,
+        scale:1,
+        transition: {
+            when:'beforeChildren',
+            staggerChildren: 0.15,
+        },
+    },
+    hidden: { opacity:0, scale:0, },
+}
+
+//individual item
+const item = {
+    visible: {opacity:1, y:0},
+    hidden: {opacity:0, y:20},
+}
+
+export function Lesson(){
+    const [isVisible, setIsVisible] = useState(true)
+
+    return(
+        <div className="demo">
+        {/* List */}
+
+        <motion.ul variants={list} style={{some CSS styling code was hidden}}>
+            {/*Items*/}
+            {
+                [0,1,2,3,4].map((i)=>(
+                    <motion.li 
+                        key={i}
+                        variants={item}
+                        className="box purpule"
+                        style={{width:60, height:60}}
+                        animate={isVisible? 'visible':'hidden'}
+                    />
+                ))
+            }
+
+        </motion.ul>
+
+        <button onClick={() => setIsVisible(!isVisible)}>
+            {isVisible ? "Hide" : "Show"}
+        </button>
+
+        </div>
+    )
+}
