@@ -28,7 +28,11 @@ const validate = (data) => {
 
 const saveContactData = async (req, res) => {
   try {
+    console.log("1. saveContactData started");
+
     const { subject, fullName, emailId, phoneNo, message } = req.body;
+
+    console.log("2. Request body received");
 
     if (!subject || !fullName || !emailId || !phoneNo || !message) {
       return res
@@ -37,11 +41,16 @@ const saveContactData = async (req, res) => {
     }
 
     const errors = validate(req.body);
-    if (Object.keys(errors).length !== 0){
+
+    if (Object.keys(errors).length !== 0) {
       return res
         .status(400)
         .json({ success: false, errors });
     }
+
+    console.log("3. Validation passed");
+
+    console.log("4. Creating contact in database...");
 
     const newContact = await Contact.create({
       fullName,
@@ -51,24 +60,31 @@ const saveContactData = async (req, res) => {
       message,
     });
 
+    console.log("5. Contact saved to database:", newContact._id);
+
+    console.log("6. Sending email...");
+
     await sendMail({
       to: process.env.GYM_OWNER_MAIL_ID,
       subject: subject,
       text: `Name: ${fullName}\nEmail: ${emailId}\nPhone: ${phoneNo}\nMessage: ${message}`,
     });
 
-    console.log("Sent the mail successfully")
+    console.log("7. Sent the mail successfully");
 
-    return res
-      .status(201)
-      .json({ success: true, message: "Query has been submitted" });
+    return res.status(201).json({
+      success: true,
+      message: "Query has been submitted",
+    });
+
   } catch (error) {
+    console.error("CONTACT FORM ERROR:", error);
+
     return res.status(500).json({
       success: false,
-      message: "Internal server error: ",
+      message: "Internal server error",
       error: error.message,
     });
-    
   }
 };
 
