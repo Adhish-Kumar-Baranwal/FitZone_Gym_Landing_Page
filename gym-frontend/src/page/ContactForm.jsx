@@ -62,7 +62,7 @@ const ContactForm = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://fitzone-gym-landing-page.onrender.com/contact-form",
+        "https://fitzone-gym-landing-page.onrender.com/api/contact-form",
         formData,
         {
           headers: {
