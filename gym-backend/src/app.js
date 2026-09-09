@@ -14,6 +14,6 @@ app.use(
 );
 app.use(express.json({ limit: "16kb" }));
 
-app.use("/api/v1", contactRouter);
+app.use(contactRouter);
 
 export { app };
