@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import Testimonials from "../components/Testimonials";
-
+import rohitImage from "../assets/trainers/rohit-kapoor.jpg";
+import snehaImage from "../assets/trainers/sneha-patil.jpg";
+import aryanImage from "../assets/trainers/aryan-desai.jpg";
+import priyaImage from "../assets/trainers/priya-mehta.jpg";
 
 const Trainers = () => {
   const trainers = [
@@ -10,28 +13,28 @@ const Trainers = () => {
       specialization: "Weight Training Coach",
       experience: "8 years experience",
       bio: "Certified strength and conditioning specialist with a passion for helping members build muscle and improve overall fitness.",
-      image: "src/assets/trainers/rohit-kapoor.jpg",
+      image: rohitImage,
     },
     {
       name: "Sneha Patil",
       specialization: "Yoga & Flexibility Coach",
       experience: "6 years experience",
       bio: "Experienced yoga instructor focused on mindfulness, flexibility, and helping members find balance between strength and recovery.",
-      image: "src/assets/trainers/sneha-patil.jpg",
+      image: snehaImage,
     },
     {
       name: "Aryan Desai",
       specialization: "Cardio & HIIT Coach",
       experience: "5 years experience",
       bio: "High energy HIIT specialist who designs intense but achievable workouts that push members beyond their limits safely.",
-      image: "src/assets/trainers/aryan-desai.jpg",
+      image: aryanImage,
     },
     {
       name: "Priya Mehta",
       specialization: "Nutrition & Wellness Coach",
       experience: "7 years experience",
       bio: "Certified nutritionist and wellness coach helping members pair their training with the right diet for maximum results.",
-      image: "src/assets/trainers/priya-mehta.jpg",
+      image: priyaImage,
     },
   ];
 
