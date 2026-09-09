@@ -1,6 +1,8 @@
 import nodemailer from "nodemailer";
 
 const sendMail = async ({ to, subject, text }) => {
+  console.log("Creating Brevo transporter...");
+
   const transporter = nodemailer.createTransport({
     host: "smtp-relay.brevo.com",
     port: 587,
@@ -11,7 +13,11 @@ const sendMail = async ({ to, subject, text }) => {
     },
   });
 
+  console.log("Verifying Brevo SMTP connection...");
+
   await transporter.verify();
+
+  console.log("Brevo SMTP connection verified");
 
   await transporter.sendMail({
     from: process.env.GYM_OWNER_MAIL_ID_REAL,
@@ -19,6 +25,8 @@ const sendMail = async ({ to, subject, text }) => {
     subject,
     text,
   });
+
+  console.log("Email sent successfully");
 };
 
 export { sendMail };
