@@ -13,11 +13,12 @@ const sendMail = async ({ to, subject, text }) => {
     },
   });
 
-  console.log("Verifying Brevo SMTP connection...");
+  // console.log("Verifying Brevo SMTP connection...");
 
-  await transporter.verify();
+  // await transporter.verify();
 
-  console.log("Brevo SMTP connection verified");
+  // console.log("Brevo SMTP connection verified");
+  console.log("Sending email through Brevo...");
 
   await transporter.sendMail({
     from: process.env.GYM_OWNER_MAIL_ID_REAL,
