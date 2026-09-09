@@ -1,52 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 body {
   background-color: #09090b;
   color: #fafafa;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-@utility flex-center{
-    @apply flex justify-center items-center;
+@utility flex-center {
+  @apply flex items-center justify-center;
 }
 
-@layer components{
-    .navBar{
-        @apply relative w-full py-3 px-8 bg-zinc-900 border-b-2 border-zinc-800;
-    }
-    .cta-btn{
-        @apply bg-orange-500 px-5 py-2.5 rounded-md font-semibold transition-colors duration-300 ease-in-out hover:bg-orange-600 cursor-pointer;
-    }
-    .card{
-        @apply bg-zinc-900 border-zinc-800 border rounded-md mx-6 py-6 px-4;
-    }
-    .footer-links{
-        @apply px-2 py-1 cursor-pointer text-zinc-400 hover:text-white transition-colors duration-300 ease-in-out;
-    }
-
-    .social-icon{
-        @apply text-zinc-400 cursor-pointer hover:text-white transition-colors duration-300 ease-in-out
-    }
-
-    .contact-input{
-        @apply focus:border-orange-500 focus:outline-none border rounded p-1 bg-zinc-900 border-zinc-700 text-white
-    }
-
-    .contact-label{
-        @apply text-sm text-zinc-400
-    }
-
-    .pricing-btns{
-        @apply mt-auto transition-colors duration-300 ease-in-out w-full py-2 font-semibold rounded-md cursor-pointer
-    }
-    
-    .pricing-btns-highlighted{
-        @apply bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-600
-    }
-
-    .pricing-btns-non-highlighted{
-        @apply border border-zinc-700 hover:border-orange-500 active:bg-orange-500 hover:text-orange-500 active:text-orange-600 text-zinc-300
-    }
+@utility navBar {
+  @apply relative w-full bg-zinc-900 border-b-2 border-zinc-800 px-8 py-3;
 }
 
+@utility cta-btn {
+  @apply cursor-pointer rounded-md bg-orange-500 px-5 py-2.5 font-semibold transition-colors duration-300 ease-in-out hover:bg-orange-600;
+}
+
+@utility card {
+  @apply mx-6 rounded-md border border-zinc-800 bg-zinc-900 px-4 py-6;
+}
+
+@utility footer-links {
+  @apply cursor-pointer px-2 py-1 text-zinc-400 transition-colors duration-300 ease-in-out hover:text-white;
+}
+
+@utility social-icon {
+  @apply cursor-pointer text-zinc-400 transition-colors duration-300 ease-in-out hover:text-white;
+}
+
+@utility contact-input {
+  @apply rounded border border-zinc-700 bg-zinc-900 p-1 text-white focus:border-orange-500 focus:outline-none;
+}
+
+@utility contact-label {
+  @apply text-sm text-zinc-400;
+}
+
+@utility pricing-btns {
+  @apply mt-auto w-full cursor-pointer rounded-md py-2 font-semibold transition-colors duration-300 ease-in-out;
+}
+
+@utility pricing-btns-highlighted {
+  @apply bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-600;
+}
+
+@utility pricing-btns-non-highlighted {
+  @apply border border-zinc-700 text-zinc-300 hover:border-orange-500 hover:text-orange-500 active:bg-orange-500 active:text-orange-600;
+}
