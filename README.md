@@ -5,8 +5,8 @@ plan-based enquiry pre-filling, scroll-triggered animations, and full
 responsive design across mobile, tablet, and desktop.
 
 ## Live Demo
-- Frontend: [your Vercel URL]
-- Backend: [your Render URL]
+- Frontend: https://fit-zone-gym-landing-page.vercel.app/
+- Backend: https://fitzone-gym-landing-page.onrender.com
 
 ## Features
 - **Multi-page responsive layout** — Home, Pricing, Trainers, Contact, 
@@ -50,7 +50,3 @@ cd gym-frontend
 npm install
 npm run dev
 ```
-
-## Environment Variables
-
-Backend requires a `.env` file with:
